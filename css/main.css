@@ -98,6 +98,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.content-wrapper{
+    width: 90%;
+    margin: 50px 0;
+}
+
+
 /* -------- Base Header - footer styles -------*/
 
 header,
@@ -145,7 +151,7 @@ header nav ul {
 
 footer{
     flex-direction: column;
-/*    */
+
 }
 
 footer p{
@@ -154,7 +160,7 @@ footer p{
 
 footer .content-wrapper{
     width: 55%;
-    margin: 50px 0;
+/*    margin: 50px 0;*/
 }
 
 footer .contact {
@@ -180,12 +186,6 @@ footer .copyright {
 
 /* -------- Mobile Styles - Homepage -------*/
 
-/*================== QUESTION CONTENT WRAPPER =====================*/
-/*Base styles*/
-.content-wrapper{
-    width: 90%;
-}
-
 /*  Hero Area  */
 .hero-area {
     display: flex;
@@ -195,8 +195,10 @@ footer .copyright {
 
 /*===== question hero area h1 ========*/
 .hero-area h1{
+/*
     padding: 50px 0;
     margin: 0px 20px;
+*/
 }
 
 .hero-area .content-wrapper{
@@ -217,22 +219,26 @@ aside .content-wrapper{
 
 aside .form-description h3{
 /*    Differs from solution code?*/
+/*
     padding-top: 30px;
     margin: 0px 20px;
+*/
 }
 aside .form-description p{
 /*    Differs from solution code*/
-    margin: 15px 20px;
+/*    margin: 15px 20px;*/
 }
 
 aside form{
-    width: 100%;
+/*    width: 100%;*/
 }
 
 aside form h3{
 /*    Differs from solution code*/
+/*
    padding: 20px 0;
     margin: 0 20px;
+*/
 }
 
 aside form input {
@@ -251,8 +257,10 @@ aside form input {
 }
 
 .features h2{
+/*
     padding-top: 50px;
     margin: 0 20px;
+*/
     margin-bottom: 60px;
 }
 
@@ -291,8 +299,8 @@ aside form input {
 }
 
 .reviews h2 {
-    padding-top: 55px;
-    margin: 0 20px;
+/*    padding-top: 55px;*/
+    margin-bottom: 30px;
 }
 
 .reviews .content-wrapper{
@@ -306,11 +314,11 @@ aside form input {
 .reviews h3{
     width: 50%;
     padding: 20px 0px;
-    margin: 0 20px;
+/*    margin: 0 20px;*/
 }
 
 .reviews p{
-    margin: 0 20px;
+    margin: 0px;
 }
 
 /*--------- About Page -----------*/
@@ -446,6 +454,156 @@ aside form input {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+
+@media only screen and (min-width: 768px){
+/* ==========   Tablet Styles  ==========*/
+    body {
+        background-color: red;
+/*        remove when done styling*/
+    }
+    
+/*    General Styles */
+    .content-wrapper{
+        max-width: 640px;
+        background-color: white;
+/*        remove bg when done styling*/
+        margin: 100px 0;
+    }
+    
+/*    Header */
+    header {
+        justify-content: space-around;
+        padding: 33px 0;
+/*        probably moot because header rule already set to this value further back in code*/
+    }
+    
+    header .content-wrapper{
+        justify-content: space-between;
+        width: 100%;
+/*        width probably moot because .content-wrapper set to max-width 640px and by the time tablet rules kick in the wrapper has reached 640px*/
+    }
+    
+    header nav {
+        width: 30%;
+/*        Measured in PSD then increased slightly to achieve same look*/
+    }
+    
+    header nav ul{
+        justify-content: space-between;
+    }
+    
+    .header-divider{
+        display: none;
+    }
+    
+/*  Hero Area*/
+    
+/*    Aside  */
+    aside .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+/*        This is space-between because width below is set to 40% allowing space between! it was set to 50% but since that equals 100% there is no space between*/
+        flex-flow: row wrap;
+        margin: 50px 0;
+    }
+    
+    aside .content-wrapper .form-description, 
+    aside .content-wrapper form{
+        width: 40%;
+        margin: 0;
+    }
+    
+/*    Features */
+    
+    .features article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column wrap;
+        flex-basis: 50%;
+    }
+    
+    .features .features-item-description{
+        width: 50%;
+    }
+    
+/*    Reviews */
+    .reviews article {
+        display: flex;
+        justify-content: space-between;
+            /*  Might need adjustment hard to tell since we havent added in img tag yet*/
+    }
+    
+    .reviews article div {
+        width: 49%;
+    }
+    
+/*  ===========   FAQ PAGE ===========*/
+    
+/*    HTML was changed from notes to work*/
+    
+       .faq .content-wrapper {
+        justify-content: space-between;
+    }
+    
+    .faq-content {
+        flex-basis: 40%;
+    }
+    
+    .faq h2{
+        width: 100%;
+    }
+    
+/*  ========== ABOUT PAGE ==========*/
+    .mission-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    
+    .mission-content p{
+        width: 45%;
+    }
+  
+    .contact-section .content-wrapper h2{
+        width: 80%;
+    }
+    
+    .contact-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+/*    Footer */
+    footer .content-wrapper{
+/*        width: 100%;*/
+        width: 65%;
+    }
+    
+    .footer-content{
+        display: flex;
+/*        justify-content: space-around;*/
+        justify-content: space-between;
+        align-items: center;
+/*        align-items might be moot?*/
+    }
+    
+    footer .contact{
+        margin-bottom: 0;
+    }
+    
+    footer .copyright{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+/* ==========   Desktop Styles ========= */
+}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
