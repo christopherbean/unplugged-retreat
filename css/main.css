@@ -603,6 +603,97 @@ aside form input {
 
 @media only screen and (min-width: 1200px){
 /* ==========   Desktop Styles ========= */
+    
+/*    to be removed after layout is finished*/
+    body{
+        background-color: blue;
+    }
+    
+/*    Base Style*/
+    .content-wrapper {
+        max-width: 960px;
+    }
+    
+/* ====== Header and Footer Styles ========== */
+    
+/*    Header   */
+    
+    header {
+        /*  no apparent difference*/
+    }
+    
+/*    Footer  */
+    
+    footer{
+        /*  no apparent differences*/
+    }
+    
+/* =================== Home Page Section ================   */
+/*  Hero Area   */
+    .hero-area .content-wrapper{
+        margin: 50px 0;
+/*        This wasn't part of the solution code*/
+    }
+    
+    .hero-area h1{
+        width: 60%;
+/*        added from solution code hint*/
+    }
+    
+/*    Aside */
+    aside .content-wrapper{
+        justify-content: space-around;
+    }
+    
+    aside .content-wrapper .form-description,
+    aside .content-wrapper form {
+        width: 33%;
+/*        found from using the twelve columns and a little math!*/
+    }
+    
+
+
+/*  Features Area  */
+    .features h2{
+        width: 90%;
+    }
+    
+    
+    .features article{
+    flex-basis: 33%;
+}
+
+/*  Reviews */
+    .reviews article div{
+        width: 42%;
+        /*   This is a little hard to say as we dont have the image in here yet*/
+    }
+
+/* ================== FAQ Page Section =================  */
+
+    .faq h2 {
+        width: 100%;
+    }
+    
+    .faq-content {
+    flex-basis: 45%;
+/*    This was not a necessary change?*/
+}
+
+
+
+
+/* ================= About Page Section ================  */
+
+    .mission h2,
+    .contact-section .content-wrapper h2{
+    width: 95%;
+}
+
+    .contact-section .content-wrapper h2{
+    margin-bottom: 35px;
+}
+
 }
 
 @media only screen and (min-width: 35em) {
