@@ -189,6 +189,15 @@ header .content-wrapper {
     
 }
 
+header figure {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+/* RECAP WHAT WE DID WITH IMAGES!!!*/
 
 .header-divider {
     width: 100%;
@@ -204,6 +213,8 @@ header nav{
     align-items: center;
     flex-flow: row wrap;
     width: 60%;
+    font-size: 1.125em;
+    font-weight: 700;
 }
 
 header nav ul {
@@ -212,10 +223,9 @@ header nav ul {
     width: 100%;
 }
 
-
 footer{
+    text-align: center;
     flex-direction: column;
-
 }
 
 footer p{
@@ -234,7 +244,7 @@ footer .contact {
 
 footer .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -258,9 +268,10 @@ footer .copyright {
     flex-flow: row wrap;
     background: url('../img/hero-bg-image.jpg') center no-repeat;
     background-size: cover;
+    min-height: 500px;
 }
 
-/*===== question hero area h1 ========*/
+/*===== hero area h1 ========*/
 .hero-area h1{
 /*
     padding: 50px 0;
@@ -398,6 +409,14 @@ aside form input {
 
 .reviews .content-wrapper{
     
+}
+
+.reviews figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 .reviews .content-wrapper article div{
@@ -554,14 +573,23 @@ aside form input {
 
 @media only screen and (min-width: 768px){
 /* ==========   Tablet Styles  ==========*/
-    body {
-        
-    }
+   
     
 /*    General Styles */
     .content-wrapper{
         max-width: 640px;
         margin: 100px 0;
+    }
+    
+    h2 {
+        font-size: 2.25em;
+        line-height: 48px;
+    }
+    
+    h3,
+    h4 {
+        font-size: 1.5em;
+        line-height: 30px;
     }
     
 /*    Header */
@@ -577,6 +605,10 @@ aside form input {
 /*        width probably moot because .content-wrapper set to max-width 640px and by the time tablet rules kick in the wrapper has reached 640px*/
     }
     
+    header figure{
+        width: 30%;
+    }
+    
     header nav {
         width: 30%;
 /*        Measured in PSD then increased slightly to achieve same look*/
@@ -586,11 +618,24 @@ aside form input {
         justify-content: space-between;
     }
     
+    header nav ul li a{
+        font-size: 1em;
+    }
+    
     .header-divider{
         display: none;
     }
     
 /*  Hero Area*/
+    
+    .hero-area{
+        min-height: 600px;
+    }
+    
+    .hero-area .content-wrapper h1{
+        font-size: 3em;
+        line-height: 48px;
+    }
     
 /*    Aside  */
     aside .content-wrapper {
@@ -607,6 +652,7 @@ aside form input {
         margin: 0;
     }
     
+    
 /*    Features */
     
     .features article{
@@ -622,15 +668,27 @@ aside form input {
     }
     
 /*    Reviews */
+    
+    .reviews h2{
+        width: 85%;
+    }
+    
+    .reviews h3{
+        width: 75%;
+        margin: 0;
+    }
+    
+    .reviews figure,
+    .reviews article div{
+        width: 49%;
+    }
+    
     .reviews article {
         display: flex;
         justify-content: space-between;
             /*  Might need adjustment hard to tell since we havent added in img tag yet*/
     }
     
-    .reviews article div {
-        width: 49%;
-    }
     
 /*  ===========   FAQ PAGE ===========*/
     
@@ -682,6 +740,7 @@ aside form input {
         justify-content: space-between;
         align-items: center;
 /*        align-items might be moot?*/
+        flex-direction: row;
     }
     
     footer .contact{
@@ -697,22 +756,36 @@ aside form input {
 @media only screen and (min-width: 1200px){
 /* ==========   Desktop Styles ========= */
     
-/*    to be removed after layout is finished*/
-    body{
-        background-color: blue;
-    }
     
 /*    Base Style*/
     .content-wrapper {
         max-width: 960px;
     }
     
+    h3,
+    h4{
+        font-size: 1.875em;
+    }
+    
+    p{
+        font-size: 1.125em;
+        line-height: 24px;
+    }
+    
 /* ====== Header and Footer Styles ========== */
     
 /*    Header   */
     
-    header {
-        /*  no apparent difference*/
+    header{
+        padding: 15px 0;
+    }
+    
+    header figure {
+        width: 25%;
+    }
+    
+    header nav ul li a{
+        font-size: 1.125em;
     }
     
 /*    Footer  */
@@ -723,14 +796,18 @@ aside form input {
     
 /* =================== Home Page Section ================   */
 /*  Hero Area   */
+    
+    .hero-area {
+        min-height: 775px;
+    }
     .hero-area .content-wrapper{
         margin: 50px 0;
 /*        This wasn't part of the solution code*/
     }
     
     .hero-area h1{
-        width: 60%;
-/*        added from solution code hint*/
+        width: 80%;
+        font-size: 3.75em;
     }
     
 /*    Aside */
@@ -742,6 +819,14 @@ aside form input {
     aside .content-wrapper form {
         width: 33%;
 /*        found from using the twelve columns and a little math!*/
+    }
+    
+    input[type=text]{
+        font-size: 1.125em;
+    }
+    
+    input[type=button]{
+        font-size: 1.5em;
     }
     
 
@@ -757,15 +842,23 @@ aside form input {
 }
 
 /*  Reviews */
+    .reviews figure {
+        width: 50%;
+    }
+    
     .reviews article div{
-        width: 42%;
-        /*   This is a little hard to say as we dont have the image in here yet*/
+        width: 45%;
+    }
+    
+    .reviews h2{
+        padding-bottom: 50px;
     }
 
 /* ================== FAQ Page Section =================  */
 
     .faq h2 {
         width: 100%;
+        font-size: 3em;
     }
     
     .faq-content {
@@ -781,6 +874,7 @@ aside form input {
     .mission h2,
     .contact-section .content-wrapper h2{
     width: 95%;
+    font-size: 3em;
 }
 
     .contact-section .content-wrapper h2{
