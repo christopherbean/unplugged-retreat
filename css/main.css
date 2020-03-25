@@ -197,8 +197,6 @@ header figure {
     flex-flow: row wrap;
 }
 
-/* RECAP WHAT WE DID WITH IMAGES!!!*/
-
 .header-divider {
     width: 100%;
     height: 1px;
@@ -252,7 +250,16 @@ footer .social-icons p{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #527158;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
+
+footer .social-icons p i{ 
+    font-size: 1.125em;
+}
+
 
 footer .copyright {
     margin: 20px 0;
@@ -724,15 +731,19 @@ input[type=button]{
     
     .footer-content{
         display: flex;
-/*        justify-content: space-around;*/
         justify-content: space-between;
         align-items: center;
-/*        align-items might be moot?*/
         flex-direction: row;
     }
     
     footer .contact{
         margin-bottom: 0;
+    }
+    
+    footer .social-icons{
+        width: 12.5em;
+/*        this width is 12.5 times our default font size of 16px ie 200px!*/
+        justify-content: space-between;
     }
     
     footer .copyright{
