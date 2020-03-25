@@ -292,22 +292,6 @@ aside {
     background-color: #527158;
 }
 
-aside .content-wrapper{
-    
-}
-
-aside .form-description h3{
-/*    Differs from solution code?*/
-/*
-    padding-top: 30px;
-    margin: 0px 20px;
-*/
-}
-aside .form-description p{
-/*    Differs from solution code*/
-/*    margin: 15px 20px;*/
-}
-
 aside form{
     margin-top: 30px;
 }
@@ -334,21 +318,6 @@ input[type=button]{
     text-transform: uppercase;
 }
 
-aside form h3{
-/*    Differs from solution code*/
-/*
-   padding: 20px 0;
-    margin: 0 20px;
-*/
-}
-
-aside form input {
-/*   This hasn't been covered yet
-    width: 90%;
-    padding: 20px 15px;
-    margin: 15px 20px;
-*/
-}
 
 /* Features */
 .features{
@@ -360,16 +329,7 @@ aside form input {
 }
 
 .features h2{
-/*
-    padding-top: 50px;
-    margin: 0 20px;
-*/
     margin-bottom: 60px;
-}
-
-.features p{
-    padding: 0;
-    margin: 0;
 }
 
 .features .features-items {
@@ -385,13 +345,16 @@ aside form input {
     margin: 30px 0;
 }
 
-.fontawesome-icon{
-   
+.features i {
+    font-size: 3.75em;
+    margin-bottom: 40px;
 }
 
-.features-item-description{
-    
+.features p{
+    margin: 0;
+    text-align: center;
 }
+
 
 /* Reviews */
 
@@ -680,7 +643,12 @@ aside form input {
     }
     
     .features .features-item-description{
-        width: 50%;
+        width: 62%;
+    }
+    
+    .features i{
+        font-size: 4.5em;
+        margin-bottom: 30px;
     }
     
 /*    Reviews */
