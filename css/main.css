@@ -381,20 +381,12 @@ input[type=button]{
     margin-bottom: 30px;
 }
 
-.reviews .content-wrapper{
-    
-}
-
 .reviews figure{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-}
-
-.reviews .content-wrapper article div{
-    
 }
 
 .reviews h3{
@@ -566,7 +558,6 @@ input[type=button]{
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 
 @media only screen and (min-width: 768px){
 /* ==========   Tablet Styles  ==========*/
